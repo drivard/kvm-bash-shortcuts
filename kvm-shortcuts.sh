@@ -22,4 +22,12 @@
 #
 
 # list all the VMs
-alias vmlist="virsh --connect qemu:///system list"
+alias vmlist="virsh --connect qemu:///system list --all"
+alias vmstop="virsh --connect qemu:///system shutdown "
+alias vmstart="virsh --connect qemu:///system start "
+alias vmautostart="virsh --connect qemu:///system autostart "
+alias vmforcestop="virsh --connect qemu:///system destroy "
+alias vminfo="virsh --connect qemu:///system dominfo "
+alias vmrestart="virsh --connect qemu:///system reboot "
+
+
