@@ -32,3 +32,7 @@ alias vmrestart="virsh --connect qemu:///system reboot "
 alias vmdelete="virsh --connect qemu:///system undefine "
 alias vmvcpuinfo="virsh --connect qemu:///system vcpuinfo "
 alias vmnodeinfo="virsh --connect qemu:///system nodeinfo"
+alias vmsetmem="virsh --connect qemu:///system setmem "
+alias vmsetvcpus="virsh --connect qemu:///system setvcpus "
+alias vmnetlist="virsh --connect qemu:///system net-list"
+
