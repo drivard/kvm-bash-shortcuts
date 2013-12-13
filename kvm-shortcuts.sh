@@ -30,4 +30,5 @@ alias vmforcestop="virsh --connect qemu:///system destroy "
 alias vminfo="virsh --connect qemu:///system dominfo "
 alias vmrestart="virsh --connect qemu:///system reboot "
 alias vmdelete="virsh --connect qemu:///system undefine "
-
+alias vmvcpuinfo="virsh --connect qemu:///system vcpuinfo "
+alias vmnodeinfo="virsh --connect qemu:///system nodeinfo"
