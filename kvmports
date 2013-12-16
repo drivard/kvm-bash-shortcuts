@@ -1,8 +1,7 @@
 #!/bin/sh
 VM="$1"
-# VMPID=$(ps aux | grep kvm | grep -v grep | grep $VM | awk '{print $2}')
-# VMPID=$(ps aux | grep kvm | grep $VM | grep -v grep | awk '{print $1}')
-VMPID=$(ps aux | grep kvm | grep $VM | awk '{print $2}')
+VMID=$(nova list | grep $VM | awk '{print $2}')
+VMPID=$(ps aux | grep kvm | grep $VMID | awk '{print $2}')
 VMPID=$(echo $VMPID | awk -F' ' '{print $1}')
 # echo $VMPID
 echo $(netstat -lnp | grep $VMPID | awk '{print $4}' | head -1 | awk -F':' '{print $2}')
