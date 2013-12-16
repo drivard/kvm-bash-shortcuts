@@ -1,7 +1,9 @@
 #!/bin/sh
-'To use this script only get the NAME of your OpenStack instance in Nova, that you can find doing nova list.'
-'Then it uses this name to figure out the nova id and the from the nova id it can figures out the vnc port of the VM.'
-'usage: kvmports "vm.example.com"'
+#
+# To use this script only get the NAME of your OpenStack instance in Nova, that you can find doing nova list.
+# Then it uses this name to figure out the nova id and the from the nova id it can figures out the vnc port of the VM.
+# usage: kvmports "vm.example.com"
+#
 VM="$1"
 VMID=$(nova list | grep $VM | awk '{print $2}')
 VMPID=$(ps aux | grep kvm | grep $VMID | awk '{print $2}')
